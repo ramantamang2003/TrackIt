@@ -10,76 +10,105 @@ class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() => _HomePageState();
 }
+// class HomePage extends StatelessWidget {
+//   const HomePage({super.key});
 
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(actions: [Text("ANI TV")]),
+//       body: Container(
+//         child: Row(
+//           children: [
+//             Container(child: Text("hii")),
+//             Expanded(
+//               child: Container(
+//                 alignment: Alignment.topRight,
+//                 child: Icon(
+//                   Icons.search,
+//                   size: 50,
+//                 ),
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Colors.white,
-      // actions: [
-      //   Align(
-      //     alignment: Alignment.bottomRight,
-      //     child: FloatingActionButton.extended(
-      //         onPressed: () {},
-      //         icon: IconButton(
-      //             onPressed: () {},
-      //             icon: Icon(
-      //               Icons.add,
-      //               size: 30,
-      //             )),
-      //         label: Text(
-      //           "Add",
-      //           style: TextStyle(fontSize: 20),
-      //         )),
-      //   )
-      // ],
-      // actions: [
-      //   IconButton(
-      //       onPressed: () {},
-      //       icon: Icon(
-      //         Icons.add,
-      //         color: Colors.amber,
-      //         size: 50,
-      //       ))
-      // ],
-      // ),
-      backgroundColor: Colors.white,
-      body: Column(children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 40),
-          child: Text(
-            "Shopping List",
-            style: TextStyle(
-                color: Colors.black, fontSize: 40, fontWeight: FontWeight.bold),
-          ),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("1"),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(5),
-            ),
-            Expanded(
-              child: TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(), labelText: "Item"),
+    return
+        //Container(
+        //   decoration: BoxDecoration(
+        // image: DecorationImage(
+        //     image: AssetImage('assets/image/background.jpg'))),
+        Scaffold(
+            backgroundColor: Colors.white,
+            body: Column(children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 100, top: 40),
+                child: Text(
+                  "Shopping List",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
-            ),
-            Expanded(
-                child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: "cost")),
-            )),
-          ],
-        ),
-      ]),
-    );
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(5),
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.black),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.black)),
+                          labelText: "Item",
+                          labelStyle:
+                              TextStyle(color: Colors.black, fontSize: 25),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                      child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      child: TextField(
+                          decoration: InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.black),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black)),
+                              labelText: "Cost",
+                              labelStyle: TextStyle(
+                                  color: Colors.black, fontSize: 25))),
+                    ),
+                  )),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+            ]),
+            floatingActionButtonLocation:
+                FloatingActionButtonLocation.centerFloat,
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {},
+              child: Icon(
+                Icons.add,
+                size: 40,
+              ),
+            ));
   }
 }
