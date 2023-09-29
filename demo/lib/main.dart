@@ -1,5 +1,5 @@
 import 'package:demo/LogIn-Signin-Forgot/login.dart';
-import 'package:demo/homepage.dart';
+import 'package:demo/shoppingpage.dart';
 import 'package:demo/onboardingscreen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';

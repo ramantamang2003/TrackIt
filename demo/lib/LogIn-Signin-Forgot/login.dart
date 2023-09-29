@@ -1,6 +1,6 @@
 import 'package:demo/LogIn-Signin-Forgot/forgot.dart';
 import 'package:demo/LogIn-Signin-Forgot/signup.dart';
-import 'package:demo/homepage.dart';
+import 'package:demo/shoppingpage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -19,11 +19,9 @@ class LoginPage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: Center(
-            child: Text(
-              "WELCOME",
-              style: TextStyle(fontSize: 30),
-            ),
+          title: Text(
+            "WELCOME",
+            style: TextStyle(fontSize: 30),
           ),
         ),
         body: ListView(
@@ -105,7 +103,7 @@ class LoginPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: InkWell(
                 onTap: () {
-                  Get.to(HomePage());
+                  Get.to(ShopppingPage());
                   print("logged in");
                 },
                 child: Container(
